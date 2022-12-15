@@ -1,5 +1,5 @@
 {
-  "name": "backend-iweb2223",
+  "name": "parcial3",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AngelJRM01/BACKEND-IWEB2223.git"
+    "url": "git+https://github.com/angelfdezcivila/parcial3DatosAbiertos.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AngelJRM01/BACKEND-IWEB2223/issues"
+    "url": "https://github.com/angelfdezcivila/parcial3DatosAbiertos.git"
   },
-  "homepage": "https://github.com/AngelJRM01/BACKEND-IWEB2223#readme",
+  "homepage": "https://github.com/angelfdezcivila/parcial3DatosAbiertos.git#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
