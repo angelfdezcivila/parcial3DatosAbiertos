@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "d01467c7-d240-4f06-8729-07419fded4e1",
+		"name": "A7abiertosREST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21354009"
+	},
+	"item": [
+		{
+			"name": "/tourists/number/{comunidadAutonoma}/{mes}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base:url}}/tourists/number/:comunidadAutonoma/:mes",
+					"host": [
+						"{{base:url}}"
+					],
+					"path": [
+						"tourists",
+						"number",
+						":comunidadAutonoma",
+						":mes"
+					],
+					"variable": [
+						{
+							"key": "comunidadAutonoma",
+							"value": "Andalucía"
+						},
+						{
+							"key": "mes",
+							"value": "M12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tourists/duration/{origen}/{comunidadAutonoma}/{mes}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base:url}}/tourists/duration/:origen/:comunidadAutonoma/:mes",
+					"host": [
+						"{{base:url}}"
+					],
+					"path": [
+						"tourists",
+						"duration",
+						":origen",
+						":comunidadAutonoma",
+						":mes"
+					],
+					"variable": [
+						{
+							"key": "origen",
+							"value": "Francia"
+						},
+						{
+							"key": "comunidadAutonoma",
+							"value": "Andalucía"
+						},
+						{
+							"key": "mes",
+							"value": "M08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/tourists/peak/{comunidadAutonoma}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base:url}}/tourists/peak/:comunidadAutonoma",
+					"host": [
+						"{{base:url}}"
+					],
+					"path": [
+						"tourists",
+						"peak",
+						":comunidadAutonoma"
+					],
+					"variable": [
+						{
+							"key": "comunidadAutonoma",
+							"value": "Andalucía"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/gas/{localidad}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base:url}}/gas/:localidad",
+					"host": [
+						"{{base:url}}"
+					],
+					"path": [
+						"gas",
+						":localidad"
+					],
+					"variable": [
+						{
+							"key": "localidad",
+							"value": "Murcia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/gas/{tipoGasolina}/{localidad}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base:url}}/gas/:tipoGasolina/:localidad",
+					"host": [
+						"{{base:url}}"
+					],
+					"path": [
+						"gas",
+						":tipoGasolina",
+						":localidad"
+					],
+					"variable": [
+						{
+							"key": "tipoGasolina",
+							"value": "Gasolina 95 E5"
+						},
+						{
+							"key": "localidad",
+							"value": "Malaga"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/gas/{latitud}/{longitud}/{numeroDeGasolineras}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base:url}}/gas/:latitud/:longitud/:numeroDeGasolineras",
+					"host": [
+						"{{base:url}}"
+					],
+					"path": [
+						"gas",
+						":latitud",
+						":longitud",
+						":numeroDeGasolineras"
+					],
+					"variable": [
+						{
+							"key": "latitud",
+							"value": "0"
+						},
+						{
+							"key": "longitud",
+							"value": "0"
+						},
+						{
+							"key": "numeroDeGasolineras",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/gas/gradoAproximacion/{latitud}/{longitud}/{gradoAproximacion}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base:url}}/gas/gradoAproximacion/:latitud/:longitud/:gradoAproximacion",
+					"host": [
+						"{{base:url}}"
+					],
+					"path": [
+						"gas",
+						"gradoAproximacion",
+						":latitud",
+						":longitud",
+						":gradoAproximacion"
+					],
+					"variable": [
+						{
+							"key": "latitud",
+							"value": "27.805"
+						},
+						{
+							"key": "longitud",
+							"value": "-15.474"
+						},
+						{
+							"key": "gradoAproximacion",
+							"value": "0.1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base:url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
